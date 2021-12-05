@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './App.css';
 
 import requestAccount from './helpers/requestAccount';
 import fetchHighestBid from './helpers/fetchHighestBid';
@@ -67,8 +68,7 @@ function App() {
                 </p>
                 { !isOwner ? (
                     <form onSubmit={ submit }>
-                        <input
-                            value={ amount }
+                        <input value={ amount }
                             onChange={ event => setAmount(event.target.value) }
                             name="Bid Amount"
                             type="number"
